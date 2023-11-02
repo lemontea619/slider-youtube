@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+li {
+  list-style: none;
+  background-color: black;
+  width: 100%;
+
+  flex-shrink: 0;
+
+  text-align: center;
+  padding: 0;
+  z-index: 10;
+}
+ul {
+  padding: 0;
+  display: flex;
+  width: 100%;
+  transition-duration: 1s;
+}
