@@ -1,36 +1,36 @@
-const listElement = document.getElementById("list");
-const li = document.querySelector("li");
+const listElm = document.querySelector("ul");
+const listItemElm = document.querySelector("li");
 
 let translateX = 0;
 const clickRightButton = () => {
-  if (translateX <= li.scrollWidth - listElement.scrollWidth) {
-    listElement.style.transitionDuration = "0s";
+  if (translateX <= listItemElm.scrollWidth - listElm.scrollWidth) {
+    listElm.style.transitionDuration = "0s";
     translateX = 0;
-    listElement.style.transform = `translateX(${translateX}px)`;
+    listElm.style.transform = `translateX(${translateX}px)`;
     setTimeout(() => {
-      listElement.style.transitionDuration = "1s";
+      listElm.style.transitionDuration = "1s";
     });
   }
 
-  translateX -= li.scrollWidth;
-  listElement.style.transform = `translateX(${translateX}px)`;
+  translateX -= listItemElm.scrollWidth;
+  listElm.style.transform = `translateX(${translateX}px)`;
 
   console.log("clickRightButton");
 };
 
 const clickLeftButton = () => {
   if (translateX >= 0) {
-    listElement.style.transitionDuration = "0s";
-    translateX = li.scrollWidth - listElement.scrollWidth;
-    listElement.style.transform = `translateX(${translateX}px)`;
+    listElm.style.transitionDuration = "0s";
+    translateX = listItemElm.scrollWidth - listElm.scrollWidth;
+    listElm.style.transform = `translateX(${translateX}px)`;
 
     setTimeout(() => {
-      listElement.style.transitionDuration = "1s";
+      listElm.style.transitionDuration = "1s";
     });
   }
 
-  translateX += li.scrollWidth;
-  listElement.style.transform = `translateX(${translateX}px)`;
+  translateX += listItemElm.scrollWidth;
+  listElm.style.transform = `translateX(${translateX}px)`;
 
   console.log("clickLeftButton");
 };
