@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script>
     <title>Slider Youtube</title>
   </head>
   <body>
@@ -57,18 +58,15 @@
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
-        ></iframe
-        >"
+        ></iframe>
       </li>
     </ul>
     <div>
       <button class="slider-navi-btn"></button>
       <button class="slider-navi-btn"></button>
       <button class="slider-navi-btn"></button>
-      <script src="slider-navi.js"></script>
     </div>
-    <button onclick="clickLeftButton()">←back</button>
-    <button onclick="clickRightButton()">next→</button>
-    <script src="script.js"></script>
+    <button id="leftBtn">←back</button>
+    <button id="rightBtn">next→</button>
   </body>
 </html>
