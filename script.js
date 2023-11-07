@@ -10,6 +10,7 @@ leftBtnElm.onclick = clickleftBtm;
 const rightBtnElm = document.getElementById("rightBtn");
 rightBtnElm.onclick = clickRightBtn;
 
+// どこも押していない状態
 const btnElms = document.querySelectorAll(".slider-navi-btn");
 btnElms[0].style.backgroundColor = "#fff";
 btnElms[1].style.backgroundColor = "#000";
