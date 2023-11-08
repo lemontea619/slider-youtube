@@ -16,6 +16,32 @@ export const clickleftBtm = () => {
 
   setTranslateX(translateX + listItemElm.scrollWidth);
   listElm.style.transform = `translateX(${translateX}px)`;
+
+  // 以下btn-naviとの連携
+  let clickCount = 0;
+  let timer = null;
+  const timeout = 0;
+  let leftBtnElm = document.getElementById("leftBtn");
+  const btnElms = document.querySelectorAll(".slider-navi-btn");
+  leftBtnElm.addEventListener("click", () => {
+    clickCount += 1;
+    if (clickCount === 1) {
+      timer = setTimeout(() => {
+        if (clickCount === 1) {
+          btnElms[2].style.backgroundColor = "#fff";
+          btnElms[1].style.backgroundColor = "#000";
+          btnElms[0].style.backgroundColor = "#000";
+        } else if (clickCount === 2) {
+          btnElms[1].style.backgroundColor = "#fff";
+          btnElms[0].style.backgroundColor = "#000";
+          btnElms[2].style.backgroundColor = "#000";
+        }
+        timer = null;
+        clickCount = 0;
+      }, timeout);
+    }
+  });
+
   // if (translateX <= listItemElm.scrollWidth - listElm.scrollWidth) {
   //   listElm.style.transitionDuration = "0s";
   //   setTranslateX(0);

@@ -4,10 +4,10 @@ import { clickleftBtm, clickRightBtn } from "./slider-arrow.js";
 const listElm = document.querySelector("ul");
 const listItemElm = document.querySelector("li");
 
-const leftBtnElm = document.getElementById("leftBtn");
+let leftBtnElm = document.getElementById("leftBtn");
 leftBtnElm.onclick = clickleftBtm;
 
-const rightBtnElm = document.getElementById("rightBtn");
+let rightBtnElm = document.getElementById("rightBtn");
 rightBtnElm.onclick = clickRightBtn;
 
 // どこも押していない状態
